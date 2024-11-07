@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Header from "../../components/Header";
 import { useNavigate } from "react-router-dom";
 import { Button, Modal, Form, Container } from "react-bootstrap";
-// import loading from "../../assets/loader.gif";
 import "./home.css";
 import { addTransaction, getTransactions } from "../../utils/ApiRequest";
 import axios from "axios";
@@ -137,10 +136,6 @@ const Home = () => {
     setFrequency("7");
   };
 
-
-  
-
-
   useEffect(() => {
 
     const fetchAllTransactions = async () => {
@@ -188,7 +183,7 @@ const Home = () => {
         <>
           <Container
             style={{ position: "relative", zIndex: "2 !important" }}
-            className="mt-3"
+            className="home-container mt-3"
           >
             <div className="filterRow">
               <div className="text-white">
@@ -239,12 +234,12 @@ const Home = () => {
                 />
               </div>
 
-              <div>
-                <Button onClick={handleShow} className="addNew">
-                  Add New
+              <div className="button-group">
+                <Button  onClick={handleReset} className="resetFilter">
+                  Reset Filter
                 </Button>
-                <Button onClick={handleShow} className="mobileBtn">
-                  +
+                <Button onClick={handleShow} className="addNew">
+                  Add Transaction
                 </Button>
                 <Modal show={show} onHide={handleClose} centered>
                   <Modal.Header closeButton>
@@ -384,9 +379,7 @@ const Home = () => {
             )}
 
             <div className="containerBtn">
-              <Button variant="primary" onClick={handleReset}>
-                Reset Filter
-              </Button>
+              
             </div>
             {view === "table" ? (
               <>

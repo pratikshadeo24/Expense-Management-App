@@ -1,115 +1,146 @@
-.filterRow{
+/* Background Styling */
+.button-group {
+    display: flex;
+    gap: 10px; /* Add space between buttons */
+    justify-content: flex-start; /* Aligns buttons to the start */
+  }
+
+.home-container {
+    background-image: url("../../assets/home.jpg") ;
+    width: 100vw;       /* Full viewport width */
+    max-width: 100%;    /* Override any Bootstrap max-width */
+    padding: 0;         /* Remove padding */
+    margin: 0;          /* Remove margin */
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    position: relative;
+  }
+
+/* Button Styling */
+.addNew, .mobileBtn, .containerBtn button, .resetFilter {
+    background-color: #007bff;
+    border: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+.addNew:hover, .mobileBtn:hover, .containerBtn button:hover, .resetFilter:hover {
+    background-color: #0056b3;
+}
+
+/* Filter Row */
+.filterRow {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
-
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.data-table {
-    border-collapse: collapse;
-  }
-  
-.data-table thead th {
-    background-color: #f5f5f5;
-}
-
-.icons-handle{
+/* Date Filter */
+.date {
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
     gap: 15px;
-    /* width: 100%; */
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
 }
 
-.date{
+/* Icon Button Styling */
+.iconBtnBox {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
     gap: 10px;
-    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
 }
-  
-/* .data-table tbody tr:hover {
-    background-color: #f5f5f5;
+.iconActive {
+    background-color: #007bff;
+    color: white;
+}
+.iconDeactive {
+    color: #495057;
+}
+
+/* Table Styling */
+.data-table thead th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+.data-table tbody tr:hover {
+    background-color: #e9ecef;
+}
+.data-table tbody tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+/* Modal Styling */
+.modal-header, .modal-footer {
+    background-color: #007bff;
+    color: white;
+}
+.modal-title {
+    font-weight: 600;
+}
+
+/* Table Styling */
+.data-table thead th {
+    background-color: black;
+    color: #fff;
+    font-weight: bold;
+    padding: 12px;
+}
+
+.data-table tbody {
+    background-color: #ffffff; /* White background for tbody */
+    color: #000000; /* Black font color for tbody */
+}
+
+.data-table tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+.data-table tbody tr:hover {
+    background-color: #f1f3f5;
     cursor: pointer;
 }
-  
+
 .data-table tbody tr:nth-child(even) {
-    background-color: #f8f8f8;
-} */
-
-.containerBtn{
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    margin-bottom: 20px;
-    width: 100%;
-    margin-left: 20px;
-}
-.mobileBtn{
-    display: none !important;
+    background-color: #ffffff;
 }
 
-.iconBtnBox{
+/* Icon Button Styling */
+.icons-handle {
     display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 10px;
-    padding: 10px;
-    border: 2px solid white;
-    border-radius: 8px;
-    
-
 }
 
-.iconActive{
-    background-color: white;
-    color: black;
-}
-.iconDeactive{
-    background-color: rgb(78, 74, 78);
-    color: black;
+.edit-icon {
+    cursor: pointer;
+    color: #007bff;
+    transition: transform 0.2s ease;
 }
 
-@media only screen and (max-width: 600px) {
-    .filterRow {
-        padding: 0px !important;
-        margin-top: 0px !important;
-        display: flex;
-        gap: "5px";
-        
-    }
-    .addNew{
-        /* padding-top: 20px; */
-        display: none !important;
-    }
-    .mobileBtn{
-        display: inline-block !important;
-    }
-    .iconBtnBox{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: 0px;
-        
-    }
-    
-    .date{
-        /* padding: 10px; */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: "10px";
-        flex-direction: column;
-        margin-bottom: 10px;
-    }
-    .date .form-group{
-        width: 45%;
-    }
-
-    .containerBtn{
-        margin-left: 0px !important;
-    }
+.delete-icon {
+    cursor: pointer;
+    color: #dc3545;
+    transition: transform 0.2s ease;
 }
+
+.edit-icon:hover, .delete-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Modal Styling */
+.modal-header, .modal-footer {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.modal-title {
+    font-weight: 600;
+}
+

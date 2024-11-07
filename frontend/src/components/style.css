@@ -1,35 +1,53 @@
-.navbarCSS{
-    padding: 15px 20px;
-    display: flex !important;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between !important;
-    width: 100vw;
-    
+/* Background styling for header */
+.header-background {
+  background-color: #000;
+  padding: 10px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-
-
-.navItemCSS{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+/* Navbar styling */
+.navbarCSS {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
-/* .custom-toggler.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-  } */
+/* Navbar title styling */
+.navTitle {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #fff;
+  margin-left: 10px;
+  text-align: center;
+}
 
-/* 
-  @media only screen and (max-width: 600px) {
-    .navbarCSS {
-        padding: 0px 0px !important;
-    }
-    .navTitle{
-        font-size: 16px !important;
-    }
+/* Button styling */
+.navButton {
+  border: 1px solid #fff;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
 
-  } */
+.navButton:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
 
+/* Aligns the button to the right */
+.navItemCSS {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+/* Toggle button icon styling */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+@media only screen and (max-width: 600px) {
+  .navTitle {
+      font-size: 1.4em;
+  }
+}
